@@ -7,7 +7,7 @@ class AccountController < ApplicationController
       unless user.nil?
       # Valid user
       return false if !user.active?
-        user.update_attribute(:last_login_on, Time.now) if user && !user.new_record?
+        user.update_last_login_on! if user && !user.new_record?
         self.logged_user = user
         return true
       end
