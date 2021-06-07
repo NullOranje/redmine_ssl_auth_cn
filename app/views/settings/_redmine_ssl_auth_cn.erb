@@ -1,0 +1,13 @@
+<%-
+  roles = Role.givable.sort
+  settings = Setting.plugin_redmine_ssl_auth_cn
+%>
+
+<p>
+    <%= content_tag(:label, l(:label_redmine_ssl_auth_cn_allow_username)) %>
+    <%= check_box_tag("settings[allow_username_password]", true, settings['allow_username_password']) %>
+</p>
+<p>
+    <%= content_tag(:label, l(:label_redmine_ssl_auth_cn_http_header)) %>
+    <%= text_field_tag("settings[http_header]", settings['http_header']) %>
+</p>

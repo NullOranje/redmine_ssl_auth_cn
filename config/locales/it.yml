@@ -1,2 +1,4 @@
 it:
   ssl_auth_ssl_login: Login con certificato SSL 
+  label_redmine_ssl_auth_cn_allow_username: "Allow login with username/password?"
+  label_redmine_ssl_auth_cn_http_header: "HTTP Header"
